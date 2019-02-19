@@ -8,7 +8,7 @@ app.get("/", (req, res) => {
 
 app.get("/nome/:name", (req, res) => {
   return res.json({
-    message: `Bem-Vindo , ${req.params.name}`
+    message: `Bem-Vindo, ${req.params.name}`
   });
 });
 
