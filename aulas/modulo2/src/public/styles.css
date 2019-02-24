@@ -258,7 +258,8 @@ ul.providers {
 }
 
 #hours label.disabled {
-  opacity: 0.3;
+  /*opacity: 0.3;*/
+  display: none;
 }
 
 #hours label input {
