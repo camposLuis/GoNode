@@ -7,13 +7,15 @@
 
     <ul class="providers">
       {% for provider in providers %}
-        <li class="provider">
-          <div>
-            <img src="/files/{{ provider.avatar }}" />
-            <strong>{{ provider.name }}</strong>
-          </div>
-          <a href="/app/appointments/new/{{ provider.id }}">+</a>
-        </li>
+
+          <li class="provider">
+            <div>
+              <img src="/files/{{ provider.avatar }}" />
+              <strong>{{ provider.name }}</strong>
+            </div>
+            <a href="/app/appointments/new/{{ provider.id }}">+</a>
+          </li>
+
       {% endfor %}
     </ul>
 

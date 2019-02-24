@@ -38,4 +38,6 @@ routes.post('/app/appointments/new/:provider', AppointmentController.store)
 
 routes.get('/app/available/:provider', AvailableController.index)
 
+routes.get('/app/schedule', DashboardController.index)
+
 module.exports = routes
