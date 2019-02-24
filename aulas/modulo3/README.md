@@ -62,4 +62,6 @@ Para inicializar o projeto executar dentro do diretório principal:
           }
           module.exports = new App().express
 
-- yarn add bcryptjs
+- yarn add bcryptjs (criptografia de senha)
+
+- yarn add jsonwebtoken (token de acesso - segurança)
