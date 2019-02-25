@@ -71,3 +71,5 @@ Para inicializar o projeto executar dentro do diretório principal:
 - yarn add require-dir (facilita a importação dos controllers no arquivo routes.js)
 
 - yarn add mongoose-paginate (paginação com mongoose)
+
+- yarn add nodemailer (módulo para envio de email)
