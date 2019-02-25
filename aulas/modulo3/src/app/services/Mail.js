@@ -6,11 +6,15 @@ const mailConfig = require('../../config/mail')
 
 const transport = nodeMailer.createTransport(mailConfig)
 
+const viewPath = path.resolve(__dirname, '..', 'views', 'emails')
+
 transport.use(
   'compile',
   hbs({
-    viewEngine: exphbs(),
-    viewPath: path.resolve(__dirname, '..', 'views', 'emails'),
+    viewEngine: exphbs.create({
+      partialsDir: path.resolve(viewPath, 'purchase')
+    }),
+    viewPath,
     extName: '.hbs'
   })
 )
