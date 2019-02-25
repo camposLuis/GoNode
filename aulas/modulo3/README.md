@@ -65,3 +65,5 @@ Para inicializar o projeto executar dentro do diretório principal:
 - yarn add bcryptjs (criptografia de senha)
 
 - yarn add jsonwebtoken (token de acesso - segurança)
+
+- yarn add require-dir (facilita a importação dos controllers no arquivo routes.js)
