@@ -62,8 +62,12 @@ Para inicializar o projeto executar dentro do diretório principal:
           }
           module.exports = new App().express
 
+- yarn add mongoose (banco de dados)
+
 - yarn add bcryptjs (criptografia de senha)
 
 - yarn add jsonwebtoken (token de acesso - segurança)
 
 - yarn add require-dir (facilita a importação dos controllers no arquivo routes.js)
+
+- yarn add mongoose-paginate (paginação com mongoose)
