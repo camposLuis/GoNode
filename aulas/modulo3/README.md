@@ -73,3 +73,7 @@ Para inicializar o projeto executar dentro do diretório principal:
 - yarn add mongoose-paginate (paginação com mongoose)
 
 - yarn add nodemailer (módulo para envio de email)
+
+  # yarn add nodemailer-express-handlebars
+
+  # yarn add express-handlebars
