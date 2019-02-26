@@ -90,4 +90,8 @@
 
 - yarn add joi (schema validator)
 
-- yarn add express-validation
+- yarn add express-validation (permite retornar o erro de validação em um json)
+
+- yarn add youch (funciona como um formatador de erros)
+
+- yarn add express-async-handler (Possibilita o envio dos erros que acontecem dentro das promises para o Exception Handle)
