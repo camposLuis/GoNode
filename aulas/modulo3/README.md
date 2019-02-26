@@ -99,3 +99,7 @@
 # Utilização do Sentry (Visualização dos erros da aplicação em produção)
 
 - yarn add @sentry/node
+
+# Configurando variáveis de ambiente
+
+- yarn add dotenv
