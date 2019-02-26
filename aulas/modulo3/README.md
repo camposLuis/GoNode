@@ -1,4 +1,4 @@
-Para inicializar o projeto executar dentro do diretório principal:
+# Para inicializar o projeto executar dentro do diretório principal:
 
 - yarn init -y
 
@@ -8,13 +8,13 @@ Para inicializar o projeto executar dentro do diretório principal:
 
 - yarn eslint --init
 
-  # excluir o arquivo package-lock.json
+  - excluir o arquivo package-lock.json
 
-  # executar yarn
+  - executar yarn
 
 - yarn add nodemon -D
 
-- Criar um arquivo na raiz com o nome .editorconfig
+# Criar um arquivo na raiz com o nome .editorconfig
 
           root = true
           [*]
@@ -24,43 +24,43 @@ Para inicializar o projeto executar dentro do diretório principal:
           trim_trailing_whitespace = true
           insert_final_newline = true
 
-- No arquivo package.json adicionar
+# No arquivo package.json adicionar
 
           "scripts": {
               "start": "nodemon src/index.js"
             }
 
-- criar um diretório src e criar os arquivos (modelo somente):
+# criar um diretório src e criar os arquivos (modelo somente):
 
-  # index.js
+- index.js
 
-          const server = require('./server')
-          server.listen(process.env.PORT || 3000)
+        const server = require('./server')
+        server.listen(process.env.PORT || 3000)
 
-  # routes.js
+- routes.js
 
-          const express = require('express')
-          const routes = express.Router()
-          module.exports = routes
+        const express = require('express')
+        const routes = express.Router()
+        module.exports = routes
 
-  # server.js
+- server.js
 
-          const express = require('express')
-          class App {
-            constructor () {
-              this.express = express()
-              this.isDev = process.env.NODE_ENV !== 'production'
-              this.middlewares()
-              this.routes()
-            }
-            middlewares () {
-              this.express.use(express.json())
-            }
-            routes () {
-              this.express.use(require('./routes'))
-            }
+        const express = require('express')
+        class App {
+          constructor () {
+            this.express = express()
+            this.isDev = process.env.NODE_ENV !== 'production'
+            this.middlewares()
+            this.routes()
           }
-          module.exports = new App().express
+          middlewares () {
+            this.express.use(express.json())
+          }
+          routes () {
+            this.express.use(require('./routes'))
+          }
+        }
+        module.exports = new App().express
 
 - yarn add mongoose (banco de dados)
 
@@ -74,6 +74,14 @@ Para inicializar o projeto executar dentro do diretório principal:
 
 - yarn add nodemailer (módulo para envio de email)
 
-  # yarn add nodemailer-express-handlebars
+  - yarn add nodemailer-express-handlebars
 
-  # yarn add express-handlebars
+  - yarn add express-handlebars
+
+# Configuração de fila para envio de email
+
+- instalando o banco redis
+
+  - docker run --name noderedis -p 6379:6379 -d -t redis:alpine (versão minificada do redis)
+
+  - yarn add kue
