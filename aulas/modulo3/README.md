@@ -85,3 +85,9 @@
   - docker run --name noderedis -p 6379:6379 -d -t redis:alpine (versão minificada do redis)
 
   - yarn add kue
+
+# Configurando validação
+
+- yarn add joi (schema validator)
+
+- yarn add express-validation
