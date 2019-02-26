@@ -48,4 +48,8 @@ routes.post(
   handle(controllers.PurchaseController.store)
 )
 
+routes.get('/purchases', handle(controllers.PurchaseController.index))
+
+routes.put('/purchases/:id', handle(controllers.PurchaseController.updateAd))
+
 module.exports = routes
