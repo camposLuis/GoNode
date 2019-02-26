@@ -95,3 +95,7 @@
 - yarn add youch (funciona como um formatador de erros)
 
 - yarn add express-async-handler (Possibilita o envio dos erros que acontecem dentro das promises para o Exception Handle)
+
+# Utilização do Sentry (Visualização dos erros da aplicação em produção)
+
+- yarn add @sentry/node
