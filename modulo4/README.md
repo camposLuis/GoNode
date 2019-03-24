@@ -28,3 +28,7 @@
 
 - adonis make:controller <nome_controller>
 - adonis route:list (listar rotas)
+
+# Instalando adonis mail
+
+- adonis install @adonisjs/mail
