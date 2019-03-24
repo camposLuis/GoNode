@@ -21,7 +21,8 @@
 - Execute:
   docker run --name mysqlDb -e MYSQL_ROOT_PASSWORD=root -p 3306:3306 -d -t mysql:8.0.15 --default-authentication-plugin=mysql_native_password
   mysql -uroot --protocol tcp--character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci
-- adonis migration:run
+- adonis migration:run (executar a migration)
+- adonis migration:rollback (desfazer a migration)
 
 # Criando controller
 
