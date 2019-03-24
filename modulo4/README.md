@@ -32,3 +32,8 @@
 # Instalando adonis mail
 
 - adonis install @adonisjs/mail
+
+# Criando model
+
+- adonis make:model <nome_model> -m -c
+  - (-m: cria a migration / -c: cria o controller)
