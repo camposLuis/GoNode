@@ -50,3 +50,7 @@
 # Internacionalização com adonis
 
 - adonis install @adonisjs/antl
+
+# Criando hook de tarefa
+
+- adonis make:hook <nome_hook>
