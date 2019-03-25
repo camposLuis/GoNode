@@ -46,3 +46,7 @@
 
 - adonis make:validator <nome_model>
 - adonis make:ehandler
+
+# Internacionalização com adonis
+
+- adonis install @adonisjs/antl
