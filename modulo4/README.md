@@ -45,3 +45,4 @@
 # Criando arquivo validator
 
 - adonis make:validator <nome_model>
+- adonis make:ehandler
