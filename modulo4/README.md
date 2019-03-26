@@ -70,3 +70,7 @@
 # Iniciando servidor para rodar a fila de jobs
 
 - adonis kue:listen
+
+# Configurando Sentry
+
+- npm install @sentry/node@4.6.5
