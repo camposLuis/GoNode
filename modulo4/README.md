@@ -54,3 +54,19 @@
 # Criando hook de tarefa
 
 - adonis make:hook <nome_hook>
+
+# Utilizando Redis com adonis
+
+- adonis install @adonisjs/redis
+
+# Instalando pacote para gerenciar filas
+
+- npm install adonis-kue
+
+# Criando uma job com adonis kue
+
+- adonis make:job <nome_job>
+
+# Iniciando servidor para rodar a fila de jobs
+
+- adonis kue:listen
