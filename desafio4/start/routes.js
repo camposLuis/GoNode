@@ -7,4 +7,5 @@ Route.post('sessions', 'SessionController.store')
 
 Route.group(() => {
   Route.put('users', 'UserController.update').validator('User/Update')
+  Route.post('events', 'EventController.store')
 }).middleware(['auth'])
