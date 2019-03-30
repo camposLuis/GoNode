@@ -15,8 +15,8 @@ class EventSchema extends Schema {
         .onUpdate('CASCADE')
         .onDelete('SET NULL')
       table.string('title', 80).notNullable()
-      table.date('date').notNullable()
-      table.time('schedule').notNullable()
+      table.string('location', 100).notNullable()
+      table.datetime('date').notNullable()
       table.timestamps()
     })
   }
