@@ -13,4 +13,6 @@ Route.group(() => {
   Route.get('events/:id', 'EventController.show')
   Route.put('events/:id', 'EventController.update').validator('Event')
   Route.delete('events/:id', 'EventController.destroy')
+
+  Route.post('share/:id', 'ShareController.shareEvent')
 }).middleware(['auth'])
