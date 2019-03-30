@@ -2,16 +2,15 @@
 
 const Antl = use('Antl')
 
-class Store {
+class Session {
   get validateAll () {
     return true
   }
 
   get rules () {
     return {
-      name: 'required',
-      email: 'required|email|unique:users',
-      password: 'required|confirmed'
+      email: 'required|email',
+      password: 'required'
     }
   }
 
@@ -20,4 +19,4 @@ class Store {
   }
 }
 
-module.exports = Store
+module.exports = Session
