@@ -1,6 +1,6 @@
 const bcrypt = require("bcryptjs");
 
-const { User } = require("../../src/app/models");
+const factory = require("../factories");
 const truncate = require("../utils/truncate");
 
 describe("User", () => {
@@ -9,9 +9,7 @@ describe("User", () => {
   });
 
   it("deve criptografar a senha do usuário", async () => {
-    const user = await User.create({
-      name: "Luís",
-      email: "luis@gmail.com",
+    const user = await factory.create("User", {
       password: "luis"
     });
 

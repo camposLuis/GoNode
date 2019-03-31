@@ -2,7 +2,7 @@ const request = require("supertest");
 
 const app = require("../../src/app");
 const truncate = require("../utils/truncate");
-const { User } = require("../../src/app/models");
+const factory = require("../factories");
 
 describe("Authentication", () => {
   beforeEach(async () => {
@@ -10,9 +10,7 @@ describe("Authentication", () => {
   });
 
   it("deve ser capaz de autenticar com credenciais válidas", async () => {
-    const user = await User.create({
-      name: "Luís",
-      email: "luis@gmail.com",
+    const user = await factory.create("User", {
       password: "luis"
     });
 
@@ -27,9 +25,7 @@ describe("Authentication", () => {
   });
 
   it("não deve poder autenticar com credenciais inválidas", async () => {
-    const user = await User.create({
-      name: "Luís",
-      email: "luis@gmail.com",
+    const user = await factory.create("User", {
       password: "luis"
     });
 
@@ -44,9 +40,7 @@ describe("Authentication", () => {
   });
 
   it("deve retornar token jwt quando autenticado", async () => {
-    const user = await User.create({
-      name: "Luís",
-      email: "luis@gmail.com",
+    const user = await factory.create("User", {
       password: "luis"
     });
 
@@ -61,11 +55,7 @@ describe("Authentication", () => {
   });
 
   it("deve ser capaz de acessar rotas privadas autenticadas", async () => {
-    const user = await User.create({
-      name: "Luís",
-      email: "luis@gmail.com",
-      password: "luis"
-    });
+    const user = await factory.create("User");
 
     const response = await request(app)
       .get("/dashboard")
