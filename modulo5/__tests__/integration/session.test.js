@@ -79,4 +79,12 @@ describe("Authentication", () => {
 
     expect(response.status).toBe(401);
   });
+
+  it("não deve poder acessar rotas privadas quando não autenticado", async () => {
+    const response = await request(app)
+      .get("/dashboard")
+      .set("Authorization", "Bearer 123123");
+
+    expect(response.status).toBe(401);
+  });
 });
