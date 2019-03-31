@@ -9,6 +9,7 @@ module.exports = {
   database: process.env.DB_DATABASE,
   dialect: process.env.DB_DIALECT || "mysql",
   storage: "./__tests__/database.sqlite",
+  logging: false,
   operatorsAliases: false,
   define: {
     timestamps: true,
